@@ -1,0 +1,12 @@
+nav{
+    width: 100vw;
+    background-color: rgb(222, 249, 253);
+}
+a:hover{
+    background-color: brown;
+}
+body{
+    text-align: center;
+    background-image: url(image.jpg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

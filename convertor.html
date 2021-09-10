@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency convertor</title>
+    <link rel="stylesheet" href="new.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+.con
+{
+    font-family: 'Space Mono';
+}
+
+
+        input[type="button"]
+        {
+            border-radius: 8px;
+            border-color: #f35151;
+            color: black;
+            background-color: #f59393;
+        }
+
+        
+
+        input[type="button"]:hover
+        {
+            background-color: #8a8ea3;
+        }
+    </style>
+    
+    <script>
+        function clr()
+        {
+            document.getElementById('rupees').value="";
+            document.getElementById('USD').value="";
+            document.getElementById('pounds').value="";
+            document.getElementById('euros').value="";
+            document.getElementById('yen').value="";
+        }
+
+        function convert(val)
+        {
+            var x=document.getElementById('rupees').value;
+            if(val==1)
+            {
+                document.getElementById('USD').value=x*0.014;
+            }
+            if(val==2)
+            {
+                document.getElementById('pounds').value=x*0.009;
+            }
+            if(val==3)
+            {
+                document.getElementById('euros').value=x*0.011;
+            }
+            if(val==4)
+            {
+                document.getElementById('yen').value=x*1.48;
+            }
+            
+
+        }
+    </script>
+
+</head>
+
+
+<body background="https://wallpaperaccess.com/full/5054729.jpg">
+
+<center>
+<div class="con">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <h1><u></b> CONVERTOR</h1></b></u>
+
+    <table>
+        <tr>
+            <td><input type="button" value="&#8377" onclick="convert('9')" style="padding-left:20px;padding-right:20px"/></td>
+            <td colspan="3"><input type="text" id="rupees" ></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="&#36" onclick="convert('1')" style="padding-left:20px;padding-right:20px"/></td>
+            <td colspan="3"><input type="text" id="USD" ></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="&#163" onclick="convert('2')" style="padding-left:20px;padding-right:20px"/></td>
+            <td colspan="3"><input type="text" id="pounds" ></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="&#8364" onclick="convert('3')" style="padding-left:20px;padding-right:20px"/></td>
+            <td colspan="3"><input type="text" id="euros" ></td>
+        </tr>
+        
+        <tr>
+            <td><input type="button" value="&#165;" onclick="convert('4')" style="padding-left:20px;padding-right:20px"/></td>
+            <td colspan="3"><input type="text" id="yen" ></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="C" onclick="clr()" style="padding-left:20px;padding-right:20px"/></td>
+        </tr>
+            
+    </table>
+</div>
+    </center>  
+</body>
+</html>

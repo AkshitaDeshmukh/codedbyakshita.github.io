@@ -1,0 +1,100 @@
+<body>
+    
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>   
+     h2{ 
+         text-align: center; color: rgb(7, 7, 7); font-size: 38px; background-color: rgb(247, 110, 92);
+     }
+     h1{
+         text-align: center; font-size: 48px ;
+     }
+     
+    </style>
+<script>
+    function validate()
+    {
+        var n=document.getElementById("name");
+        if(n.value=="")
+        {
+            alert("Name not entered");
+            n.style.border="2px solid red";
+            return false;
+        }
+        else
+        {
+            if(patt_name.test(n.value))
+            {
+                alert("Data submitted");
+                return true;
+            }
+            else
+            {
+                alert("Not in format");
+                n.style.border="2px solid red";
+                return false;
+            }
+        }
+    }
+</script>
+
+</head>
+
+<body background="https://wallpaperaccess.com/full/5054729.jpg">
+   <form action="">
+    
+        <u><h1>PAYMENT FORM</h1></u>
+        <h2>Contact Information</h2>
+        
+        <p>Name: * <input type="text" name="name" id="name" maxlength="15" pattern="(^[A-Za-z]+\s[A-Za-z]+$)" required></p>
+       
+        <p>Contact Number: * <input type="text"  name="contact" maxlength="10" pattern="^([7-9][0-9]{9})" required></p>
+
+        <p>Age: <input type="number" min="15" max="120"></p>
+        
+        <p>Gender: * </p>
+            <p> Male <input type="radio" name="gender" id="male"> Female <input type="radio" name="gender" id="female">
+                 Other <input type="radio" name="gender" id="other"></p>
+
+        <p>Adress: * <textarea name="address" id="address" cols="150" rows="7" required></textarea></p>
+        <p>Email: * <input type="email" name="email" id="email" required></p>
+        <p>Pincode: * <input type="number" name="pincode" id="pincode" required></p>
+        
+        <h2>Payment Information</h2>
+
+        <p>Customer ID: * <input type="text" value="CUSTID" name="customerid" maxlength="8" pattern="[a-zA-Z0-9]+"></p> 
+        <p>Card Type: *
+            <select name="card_type" id="card_type" required>
+                <option value="">--Select a Card Type--</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Rupay">Rupay</option>
+            </select>
+        </p>
+        
+        <p>Contact Number: * <input type="text" value="+91 - " name="contact" maxlength="16" pattern="^([7-9][0-9]{9})" required> </p>
+
+        <p>
+            Card Number: * <input type="number" name="card_number" id="card_number" required>
+        </p>
+        <p>
+            Expiration Date: *  <input type="date" name="Expiry_Date" id="Expiry_Date" required>
+        </p>
+        <p>
+            CVV: * <input type="password" name="" id="password" required>
+        </p>
+        <p><input type="submit" value="Pay Now" required></p>
+        <hr>
+        <p> <center>
+            Submit your form- <input type="submit" value="SUBMIT">      <input type="submit" value="RESET"> 
+        </center></p>
+
+    </form>
+</body>
+</html>
